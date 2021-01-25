@@ -1,0 +1,2 @@
+# display *.csv in pretty column view
+column -s, -t < wp_users.csv | less -S

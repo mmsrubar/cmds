@@ -1,0 +1,2 @@
+# find files in the group bugtracker
+find / -type f -group bugtracker 2>/dev/null

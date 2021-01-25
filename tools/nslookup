@@ -1,0 +1,14 @@
+# get hostname of BIND DNS server
+nslookup -class=CHAOS -q=TXT HOSTNAME.BIND <IP-dns-server>
+
+# where are all the email for domain @vutbr.cz are going?
+nslookup -q=MX vutbr.cz
+
+# what is authoritative nameserver for domain fit.vutbr.cz?
+nslookup -q=NS fit.vutbr.cz
+
+# give me all dns records you know about vutbr.cz
+nslookup -q=any vutbr.cz
+
+# reverse mapping (PTR)
+nslookup 147.229.2.90

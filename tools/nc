@@ -1,0 +1,2 @@
+# quick netcat listener for incomming shell connection
+nc -lvnp 1234

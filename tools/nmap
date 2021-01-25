@@ -1,0 +1,2 @@
+# -sV = script=versions, -sC = script=default
+nmap -sC -sV target
