@@ -1,0 +1,2 @@
+# replay pcap with speed 100Mb/s
+sudo tcpreplay -i virbr1 dns.pcap --mbps=100

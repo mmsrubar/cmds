@@ -1,2 +1,8 @@
 # find files in the group bugtracker
 find / -type f -group bugtracker 2>/dev/null
+
+# run cat for every found file
+find . -name "named.conf" -exec cat {} >> /tmp/named.all \;
+
+# run chrome just once and use found files as arguments
+find . -exec grep chrome {} +

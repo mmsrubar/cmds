@@ -12,3 +12,6 @@ nslookup -q=any vutbr.cz
 
 # reverse mapping (PTR)
 nslookup 147.229.2.90
+
+# DNS lookup without recursion
+nslookup -norec srubik.tk.

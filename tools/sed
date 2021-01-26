@@ -1,0 +1,2 @@
+# find string after desc and use it with \1
+sed 's/desc\(.*\)/A\1A/'

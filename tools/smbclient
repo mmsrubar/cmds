@@ -1,0 +1,2 @@
+# connect to a SMB share using username adam
+smbclient //192.168.122.166/ad -U adam

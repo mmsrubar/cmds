@@ -1,0 +1,2 @@
+# get certificate from a remote host
+openssl s_client -connect greycortex.com:443

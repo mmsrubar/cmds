@@ -1,0 +1,8 @@
+# rotate image to 90 degree
+convert in.png -rotate 90 out.png
+
+# lower quality
+convert in.png -quality 95 out.png
+
+# resize img to 1100x700
+convert in.png -resize 1100x700 out.png

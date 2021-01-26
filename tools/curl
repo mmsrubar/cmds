@@ -1,0 +1,5 @@
+# connect to IMAP server
+curl --url "imap://imap.seznam.cz" --user "user@seznam.cz"
+
+# get email with ID 512 from folder spam
+curl -v --url "imap://imap.seznam.cz/spam;MAILINDEX=512" --user "user@seznam.cz"

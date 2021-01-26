@@ -1,0 +1,5 @@
+# look up NS RR for greycortex.com (short format)
+dig ns greycortex.com +short
+
+# give me any RR you have
+dig @ns.greyortex.com. any

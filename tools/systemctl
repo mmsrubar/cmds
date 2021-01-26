@@ -1,0 +1,2 @@
+# get all units
+systemctl list-units --type=service --all
