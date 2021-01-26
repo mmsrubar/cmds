@@ -1,0 +1,2 @@
+# grep only base64 strings
+egrep -o '[a-zA-Z0-9+]+==' wp_posts.csv
