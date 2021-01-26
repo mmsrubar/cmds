@@ -1,0 +1,32 @@
+# LOCAL SSH PORT FORWARDING
+# =========================
+#                                                                 www.blog.com
+#      msrubar (10.0.0.1)                                        (195.113.80.31)
+# +---------------------------+                                +------------------+
+# |                           |     XXXXXXXXXXXXXXXXXXXXXX     |                  |
+# |    ssh www.blog.com +---+-----> X     SSH Tunnel     X -------+---> sshd  22  |
+# |                         ^ |     XXXXXXXXXXXXXXXXXXXXXX     |  |               |
+# |                         | |                                |  +---> httpd 80  |
+# | wget localhost:9999 +---^ |                                |                  |
+# |                           |                                +------------------+
+# +---------------------------+
+#
+msrubar> ssh -L localhost:9999:localhost:80 user@www.blog.com
+msrubar> wget localhost:9999
+
+
+# REMOTE SSH PORT FORWARDING
+# ==========================
+#                                                                    www.blog.com
+#    msrubar (10.0.0.1)                                             (195.113.80.31)
+# +------------------------+                                +----------------------------+
+# |                        |     XXXXXXXXXXXXXXXXXXXXXX     |                            |
+# | ssh www.blog.com +---+-----> X     SSH Tunnel     X +------+---> sshd  22            |
+# |                      | |     XXXXXXXXXXXXXXXXXXXXXX     |  ^                         |
+# |                      | |                                |  |                         |
+# |         httpd 80 <---+ |                                |  +---+ wget localhost:8000 |
+# |                        |                                |                            |
+# +------------------------+                                +----------------------------+
+#
+msrubar> ssh -R localhost:8000:localhost:80 user@www.blog.com
+www.blog.com> wget localhost:8000
